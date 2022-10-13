@@ -4,7 +4,7 @@ namespace zufallsgedicht {
     //Aufgabe: L01 Zufallsgedicht
     //Name: Paula Charlotte Jordans
     //Matrikel: 271121
-    //Datum: 12.10.22
+    //Datum: 13.10.22
     //Quellen: Pia Giovannelli, Aanya Khetarpal, Julia Befus; himmelju
 
 
@@ -27,9 +27,9 @@ namespace zufallsgedicht {
 
     function getVerse(_subjekt: string[], _praedikat: string[], _objekt: string[]): string { // die funktion getVerse wird definiert
         //hier werden arrays mit dem typen string gebildet; die leeren arrays werden mit den zufälligen wörtern aus zwilen 30,31,32 gefüllt
-        let zufalligS: number = Math.floor(Math.random()); //eine variable für das zufällige subjekt wird erstellt. 
-        let zufalligP: number = Math.floor(Math.random()); // eine variable für das zufällige prädikat wird erstellt.
-        let zufalligO: number = Math.floor(Math.random()); // eine variable für das zufällige objekt wird erstellt
+        let zufalligS: number = Math.floor(Math.random()); // diese variable shuffelt den array mit den subjekten
+        let zufalligP: number = Math.floor(Math.random()); // diese variable shuffelt den Array mit den prädikaten
+        let zufalligO: number = Math.floor(Math.random()); // diese variable shufflet den Array mit den objekten
 
         let verse: string = _subjekt[zufalligS] + " " + _praedikat[zufalligP] + " " + _objekt[zufalligO] + " ."; // in der variable verse werden den drei leeren arrays die zufälligen wärter zugewiesen.
         // erst wird dem vers ein subjekt geliefert, dann ein prädikat und dann ein objekt. damit wird der satz vervollständigt
