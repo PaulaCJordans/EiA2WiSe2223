@@ -33,12 +33,13 @@ h1 {
 
 span {
     position: fixed;
-    z-index: 100;
-    width: 300px;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     background-color: rgb(12, 83, 76);
     border-radius: 20px;
-    
+    color: white;
+    padding: 20px;
+    font-size: 13px;
 }
 
 button {
