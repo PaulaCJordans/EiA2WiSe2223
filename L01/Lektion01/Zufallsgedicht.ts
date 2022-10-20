@@ -5,7 +5,7 @@ namespace zufallsgedicht {
     //Name: Paula Charlotte Jordans
     //Matrikel: 271121
     //Datum: 13.10.22
-    //Quellen: Pia Giovannelli, Aanya Khetarpal, Julia Befus; Havva Killic; himmelju
+    //Quellen: Pia Giovannelli, Aanya Khetarpal, Julia Befus; Havva Killic;
 
 
     let test: string = "expecto patronum";
