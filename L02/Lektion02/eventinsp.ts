@@ -21,8 +21,8 @@ namespace eventInspector {
         let x: number = _event.pageX + 10;
         let y: number = _event.pageY + 10;
         let spanForMouseCursor: HTMLSpanElement = <HTMLSpanElement>document.querySelector("span");
-        spanForMouseCursor.style.left = x + 10 + "px";
-        spanForMouseCursor.style.top = y + 10 +  "px";
+        spanForMouseCursor.style.left = x + "px";
+        spanForMouseCursor.style.top = y + "px";
     }
 
     function logInfo(_event: Event): void {
