@@ -2,6 +2,11 @@ namespace L02_EventInspector {
 
     window.addEventListener("load", handleLoad);
 
+    //Aufgabe: L02 EventInspektor
+    //Name: Paula Charlotte Jordans
+    //Matrikel: 271121
+    //Datum: 23.10.22
+    //Quellen: Pia Giovannelli, Aanya Khetarpal, Julia Befus; Havva Killic;
 
     function handleLoad(_event: Event): void {
         let body: HTMLElement = <HTMLElement>document.body;
