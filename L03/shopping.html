@@ -12,16 +12,38 @@
 <body>
     <div class="wrapper">
 
-        <h1>Shopping Liste</h1>
+            <h1>Shopping List</h1>
         <h2 class="text">
-            <span id="counterToDo">0 </span> in Total
+            <span id="counterItem">0</span> in total
         </h2>
-        <input id="toDo" type="text" placeholder="Erweitere die Liste" required>
         <br>
-        <input type="number" placeholder="Menge">
-        <input type="text" placeholder="Kommentar">
-        <input type="date">
-        <div class="toDoWrapper" id="toDoWrapper"></div>
+        <input type="number"placeholder="amount">           
+        <br>
+        <input type="text"id="comment"placeholder="comment">
+        <br>
+        <input type="date"id="datum">
+        <br>
+        <input id="toDo" type="text" placeholder="Add another Item" required>
+        <i id="newitem" class="fas fa-plus"></i>
+
+       
+
+        <div>
+            
+
+            <div class="container">
+                <input id="check" type="checkbox">
+                <p>Honig</p>
+                <p>29.10.2022</p>
+                <p>1 Glas</p>
+                <p>comment</p>
+                <i id="trash" class="fas fa-trash"></i>
+                <i id="edit" class="fas fa-pen"></i>
+
+            </div>
+        </div>
+        
+
     </div>
 </body>
 </html>
