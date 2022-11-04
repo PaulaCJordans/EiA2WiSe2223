@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(43, 126, 114);
+    text-align: center;
+
+}
+
+h1 {
+    color: rgb(251, 251, 251);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    height: 100px;
+    margin: 0px;
+    padding-top: 60px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.wrapper {
+    text-align: center;
+    position: relative;
+    width: 1600px;
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+
+
+#counterItem {
+    color: rgb(85,107,47);
+}
+
+#toDo {
+    width: 400px;
+    height: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+.divLabel {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.todoItem {
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    width: 364px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    left: 51%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgb(99, 99, 99);
+    outline: none;
+}
+
+.fa-trash-alt {
+    opacity: 60%;
+    font-size: 20px;
+    color: black
+   
+
+}
+
+.fa-trash-alt:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.checkBox {
+    cursor: pointer;
+}
+
+.container {
+
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    width: 364px;
+    height: 30px;
+    position: relative;
+    left: 586px;
+   
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgb(99, 99, 99);
+    outline: none;
+}
