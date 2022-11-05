@@ -3,74 +3,61 @@ Aufgabe: L04 Shopping List
 Name: Paula Jordans
 Matrikel: 271121
 Datum: 05.11.2022
-Quellen: Aanya Khetarpal, Pia Giovannelli, Julia Befus, Havva Kilic
+Quellen: Aanya Khetarpal, Pia Giovannelli, Havva Kilic, Julia Befus
 */
-
-namespace shoppinglistA04 {
-
-    let item: string;
-    let amount: number;
-    let dateData: string;
-    let comment: string;
-    let nextPurchase: string;
-    let amountItems: number = 0;
-
+var shoppinglistA04;
+(function (shoppinglistA04) {
+    let item;
+    let amount;
+    let dateData;
+    let comment;
+    let nextPurchase;
+    let amountItems = 0;
     window.addEventListener("load", loadList);
-
-    function loadList(): void {
+    function loadList() {
         document.querySelector("h2").addEventListener("click", loadInput);
         loadData();
     }
-
-    function loadData(): void {
-        for (let counter: number = 0; counter < savedInputs.length; counter++) {
-            item = savedInputs[counter].savedItem;
-            amount = savedInputs[counter].savedAmount;
-            dateData = savedInputs[counter].savedDate;
-            comment = savedInputs[counter].savedComment;
-
-            let nextPurchaseString: string = savedInputs[counter].savedPurchase.toString();
+    function loadData() {
+        for (let counter = 0; counter < shoppinglistA04.savedInputs.length; counter++) {
+            item = shoppinglistA04.savedInputs[counter].savedItem;
+            amount = shoppinglistA04.savedInputs[counter].savedAmount;
+            dateData = shoppinglistA04.savedInputs[counter].savedDate;
+            comment = shoppinglistA04.savedInputs[counter].savedComment;
+            let nextPurchaseString = shoppinglistA04.savedInputs[counter].savedPurchase.toString();
             if (nextPurchaseString == "false") {
                 nextPurchase = "";
-            } else {
+            }
+            else {
                 nextPurchase = " buy";
             }
             loadItem();
         }
-
     }
-
-    function loadInput(): void {
-
-        let formData: FormData = new FormData(document.forms[0]);
-
+    function loadInput() {
+        let formData = new FormData(document.forms[0]);
         item = formData.get("Item").toString();
         amount = Number(formData.get("Amount"));
         dateData = new Date().toLocaleDateString();
         comment = formData.get("Area").toString();
-
-        let nextPurchaseString: FormDataEntryValue = formData.get("Checkbox");
-
+        let nextPurchaseString = formData.get("Checkbox");
         if (nextPurchaseString == null) {
             nextPurchase = "";
-        } else {
+        }
+        else {
             nextPurchase = " buy";
         }
         loadItem();
     }
-
-    function loadItem(): void {
- 
-        let newElement: HTMLDivElement = document.createElement("div");
+    function loadItem() {
+        let newElement = document.createElement("div");
         newElement.innerHTML = dateData + " " + amount + " " + item + " " + comment + " " + nextPurchase;
-        let getElement: HTMLElement = document.querySelector("#output");
+        let getElement = document.querySelector("#output");
         getElement.appendChild(newElement);
         newElement.className = "outputItem" + amountItems;
         newElement.id = amountItems.toString();
         newElement.style.marginTop = "-10px";
-
-
-        let newCheckbox: HTMLInputElement = document.createElement("input");
+        let newCheckbox = document.createElement("input");
         newCheckbox.type = "checkbox";
         newCheckbox.name = "CheckboxName" + amountItems;
         getElement = document.querySelector("#output");
@@ -78,56 +65,49 @@ namespace shoppinglistA04 {
         newCheckbox.className = "checkbox" + amountItems;
         newCheckbox.id = "checkbox" + amountItems.toString();
         newCheckbox.name = "Checkbox" + amountItems.toString();
-
         newCheckbox.style.position = "relative";
         newCheckbox.style.left = "-85px";
         newCheckbox.style.top = "-14px";
-
-
-        let newEdit: HTMLDivElement = document.createElement("div");
+        let newEdit = document.createElement("div");
         newEdit.innerHTML = "<i class='fa-solid fa-pen fa-lg'></i>";
         getElement.appendChild(newEdit);
         newEdit.className = "edit" + amountItems;
         newEdit.id = "edit" + amountItems.toString();
-
         newEdit.style.position = "relative";
         newEdit.style.top = "-41px";
         newEdit.style.width = "20px";
         newEdit.style.left = "165px";
-
-
-        let newTrash: HTMLDivElement = document.createElement("div");
+        let newTrash = document.createElement("div");
         newTrash.innerHTML = "<img id='" + amountItems + "' " + "src='./trash-solid.svg'>";
         newElement.appendChild(newTrash);
         newTrash.className = "trash" + amountItems;
-
         newTrash.style.width = "15px";
         newTrash.style.position = "relative";
         newTrash.style.left = "250px";
         newTrash.style.top = "7px";
-   
-
         document.querySelector(".trash" + amountItems).addEventListener("click", deleteItem);
-        document.querySelector(".checkbox" +  amountItems).addEventListener("click", checkboxNextPurchase);
-        document.querySelector(".edit" +  amountItems).addEventListener("click", editEntry);
+        document.querySelector(".checkbox" + amountItems).addEventListener("click", checkboxNextPurchase);
+        document.querySelector(".edit" + amountItems).addEventListener("click", editEntry);
+        amountItems++;
     }
-
-    function deleteItem(_event: MouseEvent): void {
+    //Funktion zum löschen eines Eintrags -> nimmt hier ID von dem jeweiligen Trash Element und löscht damit die zugehörigen Felder
+    function deleteItem(_event) {
         console.log("delete");
-        let x: string = (_event.target as Element).id;
-        let outputElementId: HTMLElement = document.getElementById(x);
-        let editElementId: HTMLElement = document.getElementById("edit" + x);
-        let checkboxElementId: HTMLElement = document.getElementById("checkbox" + x);
+        let x = _event.target.id;
+        let outputElementId = document.getElementById(x);
+        let editElementId = document.getElementById("edit" + x);
+        let checkboxElementId = document.getElementById("checkbox" + x);
         checkboxElementId.remove();
         outputElementId.remove();
         editElementId.remove();
     }
-
-    function checkboxNextPurchase(_event: MouseEvent): void {
+    //Funktion zum überprüfen ob etwas gekauft wurde oder nicht (für die checkbox unten) <- Funktioniert noch nicht
+    function checkboxNextPurchase(_event) {
         console.log("Checkbox Liste: Click -> checkboxNextPurchase()");
     }
-
-    function editEntry(): void {
+    //Funktion zum editieren von Einträgen
+    function editEntry() {
         console.log("Edit click -> editEntry()");
     }
-}
+})(shoppinglistA04 || (shoppinglistA04 = {}));
+//# sourceMappingURL=script.js.map
