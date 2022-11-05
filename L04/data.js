@@ -3,7 +3,7 @@ Aufgabe: L04 Shopping List
 Name: Paula Jordans
 Matrikel: 271121
 Datum: 05.11.2022
-Quellen: Aanya Khetarpal, Pia Giovannelli, Julia Befus, Havva Kilic
+Quellen: Bastian Aberle, Aanya Khetarpal, Pia Giovannelli, Julia Befus, Havva Kilic
 */
 var shoppinglistA04;
 (function (shoppinglistA04) {
