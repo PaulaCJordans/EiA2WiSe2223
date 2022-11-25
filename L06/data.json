@@ -1,10 +1,9 @@
 [{
-    "item": "Honig ",
-    "amount": 1,
-    "comment": " 1 Glas",
-    "date": "14.11.2022 ",
-    "purchase": ""
-  
+    "item":"Honig",
+    "amount":1,
+    "comment":"1Glas",
+    "date":"14.11.2022",
+    "purchase":""
 },
 {
     "item": "Mandarine ",
