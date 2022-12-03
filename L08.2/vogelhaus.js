@@ -37,14 +37,14 @@ var Vogelhaus;
     function drawBackground(_horizon) {
         // Himmekfarbe
         let gradientSky = Vogelhaus.crc2.createLinearGradient(0, 0, 0, _horizon);
-        gradientSky.addColorStop(0, "skyblue");
+        gradientSky.addColorStop(0, "blue");
         gradientSky.addColorStop(1, "white");
         Vogelhaus.crc2.fillStyle = gradientSky;
         Vogelhaus.crc2.fillRect(0, 0, canvas.width, _horizon);
         // Wiesenfarbe (voll mit Schnee)
         let gradientMeadow = Vogelhaus.crc2.createLinearGradient(0, _horizon, 0, canvas.height);
         gradientMeadow.addColorStop(0, "white");
-        gradientMeadow.addColorStop(1, "white");
+        gradientMeadow.addColorStop(1, "lightgrey");
         Vogelhaus.crc2.fillStyle = gradientMeadow;
         Vogelhaus.crc2.fillRect(0, _horizon, canvas.width, canvas.height);
     }

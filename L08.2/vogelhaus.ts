@@ -57,7 +57,7 @@ namespace Vogelhaus {
 
         // Himmekfarbe
         let gradientSky: CanvasGradient = crc2.createLinearGradient(0, 0, 0, _horizon);
-        gradientSky.addColorStop(0, "skyblue");
+        gradientSky.addColorStop(0, "blue");
         gradientSky.addColorStop(1, "white");
 
         crc2.fillStyle = gradientSky;
@@ -66,7 +66,7 @@ namespace Vogelhaus {
         // Wiesenfarbe (voll mit Schnee)
         let gradientMeadow: CanvasGradient = crc2.createLinearGradient(0, _horizon, 0, canvas.height);
         gradientMeadow.addColorStop(0, "white");
-        gradientMeadow.addColorStop(1, "white");
+        gradientMeadow.addColorStop(1, "lightgrey");
 
         crc2.fillStyle = gradientMeadow;
         crc2.fillRect(0, _horizon, canvas.width, canvas.height);
