@@ -1,9 +1,9 @@
 /*
-Aufgabe: L09.1_OldMacDonalds
-Name: Paula Jordans
-Matrikel: 271121
-Datum: 08.12.2022
-Kommentar:
+Aufgabe: L09.1_OldMacDonaldsFarm
+Name: Armina Music
+Matrikel: 268021
+Datum: 04.12.2021
+Kommentar: es2017 Version
 */
 var Farm;
 (function (Farm) {
@@ -41,11 +41,11 @@ var Farm;
         document.querySelector("#nextDay").addEventListener("click", foodForAnimal);
     }
     function loadAnimals() {
-        let cow = new Animal("Milkboi", "cow", "greens", "moo", 10);
-        let dog = new Animal("Good Doggo", "dog", "meat", "woof", 12);
-        let cat = new Animal("Sir Miauz", "cat", "fish", "miauz", 5);
-        let chicken = new Animal("Kentucky", "chicken", "corn", "bock", 30);
-        let pig = new Animal("Bacon", "pig", "carrots", "quick", 25);
+        let cow = new Animal("Susi", "cow", "greens", "moo", 10);
+        let dog = new Animal("Schoko", "dog", "meat", "woof", 12);
+        let cat = new Animal("Dexti", "cat", "fish", "miauz", 5);
+        let chicken = new Animal("berta", "chicken", "corn", "bock", 30);
+        let pig = new Animal("Peppa", "pig", "carrots", "quick", 25);
         animals.push(cow);
         animals.push(dog);
         animals.push(cat);
