@@ -110,7 +110,7 @@ namespace Farm {
         currentFood.carrots -= animals[4].foodneed;
 
         for (const [key, foodAmount] of Object.entries(currentFood)) {
-            if (foodAmount <= 0){
+            if (foodAmount <= 0) {
                 alert("no more food!");
                 window.location.reload();
             }
