@@ -133,7 +133,7 @@ var Vogelhaus;
             Vogelhaus.crc2.translate(x, y + (canvas.height * 0.39));
             let treeTrunk = -30; // Baumstammhöhe
             let treeTop = -360; // Baumgipfelhöhe
-            let treeColor = ["#d2d2d2", "#e7e7e7", "#fff"]; // Grüntöne
+            let treeColor = ["#d2d2d2", "#e7e7e7", "#fff"]; //weißtöne
             let treeSize = randomNumber(0.15, 0.2);
             Vogelhaus.crc2.scale(treeSize, treeSize);
             // Baumstamm

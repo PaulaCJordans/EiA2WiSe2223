@@ -185,7 +185,7 @@ namespace Vogelhaus {
 
             let treeTrunk: number = -30; // Baumstammhöhe
             let treeTop: number = -360; // Baumgipfelhöhe
-            let treeColor: string[] = ["#d2d2d2", "#e7e7e7", "#fff"]; // Grüntöne
+            let treeColor: string[] = ["#d2d2d2", "#e7e7e7", "#fff"]; //weißtöne
 
             let treeSize: number = randomNumber(0.15, 0.2);
 
