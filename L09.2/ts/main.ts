@@ -3,7 +3,7 @@ Aufgabe: 09.2 Vogelhaus
 Name: Paula Jordans
 Matrikel Nr.: 271121
 Datum: 17.12.2022
-Quellen: Lisa Bindenhöfer, Pia Giovannelli, Aanya Khetarpal, Havva Kilic, Julia Befus
+Quellen: Lisa Blindenhöfer, Pia Giovannelli, Aanya Khetarpal, Havva Kilic, Julia Befus
 */
 
 
